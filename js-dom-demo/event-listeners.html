@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="myButton">Submit</button>
+
+    <input type="email" id="myInput">
+
+    <button onclick="submit()">Submit</button>
+
+    <script>
+        const myButton = document.querySelector('#myButton');
+
+   
+myButton.addEventListener('click', () => {
+  console.log('button was clicked');
+});
+
+const input = document.querySelector('#myInput');
+
+input.addEventListener('change', (event) => {
+  const target = event.target; // <input type="email" id="myInput">
+  console.log(target.value);
+});
+
+function submit() {
+  alert('Post has been submitted!');
+}
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+/* input, label, textarea, select {
+    display: block;
+} */
+
+body {
+    background-color: coral;
+}
+
+form > * {
+    display: block;
+}
+
+#the-label {
+    color:aqua 
+}
+
+label {
+    color:maroon
+}
+
+.big {
+    font-size: 30px;
+}
+
+.purple {
+    color: purple;
+}
+/* label {
+    display: block;
+}
+
+textarea {
+    display: block;
+}
+
+select {
+    display: block; */
+/* } */

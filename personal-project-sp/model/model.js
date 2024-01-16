@@ -1,5 +1,7 @@
 import Sequelize, { DataTypes, Model } from 'sequelize'
 
+
+
 const sequelize = new Sequelize('postgresql:///sticker_app')
 
 class Pack extends Model {}
@@ -26,6 +28,7 @@ Pack.init(
         }
     },
     {
+        tableName: 'packs',
         sequelize: sequelize,
         timestamps: false
     }
@@ -65,6 +68,7 @@ Sticker.init(
         },   
     },
     {
+        tableName: 'stickers',
         sequelize: sequelize,
         timestamps: false
     }
@@ -83,6 +87,7 @@ Cart.init(
         },
     },
     {
+        tableName: 'carts',
         sequelize: sequelize,
         timestamps: false
     }
@@ -105,6 +110,7 @@ Packs_in_cart.init(
         }
     },
     {
+        tableName: 'packs_in_carts',
         sequelize: sequelize,
         timestamps: false
     }
@@ -127,9 +133,13 @@ Stickers_in_cart.init(
         }
     },
     {
+        tableName: 'stickers_in_carts',
         sequelize: sequelize,
         timestamps: false
     }
 )
 
-sequelize.sync()
+
+
+
+export { sequelize, Packs_in_cart, Sticker, Pack, Stickers_in_cart, Cart }
